@@ -10,5 +10,5 @@ def solution(x: np.array, y: np.array) -> bool:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     #t, p = stats.ks_2samp(x, y)
-    t, p = stats.cramervonmises_2samp(x, y)
-    return p <= 0.08
+    res = stats.cramervonmises_2samp(x, y)
+    return res.pvalue <= 0.08
