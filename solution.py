@@ -9,5 +9,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    t, p = stats.ks_2samp(x, y)
+    #t, p = stats.ks_2samp(x, y)
+    t, p = stats.cramervonmises_2samp(x, y)
     return p <= 0.08
